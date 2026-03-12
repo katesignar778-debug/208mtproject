@@ -1,0 +1,297 @@
+/* css Zen Garden submission - 'Sakura', by Tatsuya Uchida */
+
+/* ================= BASIC ELEMENTS ================= */
+body {
+    margin:0;
+    padding:0;
+    font:75%/1.4 verdana,Helvetica,sans-serif;
+
+    /* fixed background */
+    background-image: url("pint.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-align:center;
+}
+
+h1,h2 {
+    display:none;
+}
+
+h3 {
+    height:38px;
+    margin:0;
+    padding:0;
+    text-indent:100%;   /* original Zen Garden hiding */
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+p {margin:0;padding:0;}
+
+abbr {border:none;}
+
+a {
+    color:#D9189F;
+    background-color:#ffffff;
+    text-decoration:underline;
+}
+
+a:hover {
+    color:#FC7AD5;
+}
+
+/* ================= LAYOUT ================= */
+.page-wrapper {
+    width:772px;
+    margin:0 auto;
+    padding:0 13px;
+    position:relative;
+    background:url(bg.gif) repeat-x #dfdfdf;
+    border-left:1px solid #ffffff;
+    border-right:1px solid #ffffff;
+    color:#454545;
+    text-align:left;
+}
+
+/* ================= HEADER ================= */
+header {
+    width:772px;
+    height:178px;
+    background-image:url("wp5695921 copy.jpg");
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.15);
+}
+
+/* ================= CONTENT ================= */
+.summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    width:546px;
+    background-color:#ffffff;  /* restore original design */
+    background-repeat:repeat-y;
+    margin:0 0 2px 226px;
+    color:#454545;
+    display:block;
+}
+
+footer {
+    width:539px;
+    margin:5px 0 0 226px;
+    text-align:right;
+    padding:3px 14px 43px 0;
+    background-color:#ffffff;
+}
+
+.sidebar {
+    position:absolute;
+    top:179px;
+    left:20px;
+    width:207px;
+    background-color:#ffffff;
+}
+
+.design-selection, .design-archives, .zen-resources {
+    margin:0 0 2px 0;
+    background-color:#ffffff;
+}
+
+/* ================= TEXT PADDING ================= */
+.summary p, .explanation p, .benefits p {
+    padding:0 15px 10px 77px;
+}
+
+.preamble p, .participation p, .requirements p {
+    padding:0 85px 10px 17px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar li {
+    list-style:none;
+    padding:6px 0 10px 0;
+    background:url(line.gif) bottom repeat-x;
+}
+
+.sidebar li a {
+    padding-left:7px;
+    background:url(link.gif) left center no-repeat;
+    text-decoration:none;
+}
+
+.sidebar li a:hover {
+    text-decoration:underline;
+}
+
+/* ================= SUMMARY BACKGROUND ================= */
+.summary p:first-child {
+    padding-top:14px;
+    background:
+        url(quicksummary_top.gif) top no-repeat,
+        url(right_bg.gif) right repeat-y;
+}
+
+.summary p:last-child {
+    padding-bottom:20px;
+    background:
+        url(right_bottom.gif) bottom no-repeat,
+        url(right_bg.gif) right repeat-y;
+}
+
+/* ================= LINKS ================= */
+.design-selection li a {
+    display:block;
+    font-weight:bold;
+    background-position:0 0.6em;
+}
+
+.design-selection a.designer-name {
+    display:inline;
+    color:#666666;
+    padding:0;
+    background:none;
+}
+
+footer a{
+    text-decoration:none;
+    color:#888888;
+    background-color:#dfdfdf;
+    border:1px solid #bdbdbd;
+    padding:3px;
+}
+
+footer a:hover{
+    background-color:#ebebeb;
+    color:#777777;
+}
+
+.extra1,.extra2,.extra3,.extra4,.extra5,.extra6{
+    display:none;
+}
+
+
+/* ================= SIDE IMAGES ================= */
+.summary {background-image:url(img_quicksummary.jpg);background-position:left bottom;}
+.preamble {background-image:url(enlightment.jpg);background-position:right bottom;}
+.explanation {background-image:url(img_explanation.jpg);background-position:left bottom;}
+.participation {background-image:url(img_participation.jpg);background-position:right bottom;}
+.benefits {background-image:url(img_benefits.jpg);background-position:left bottom;}
+.requirements {background-image:url(img_requirements.jpg);background-position:right bottom;}
+
+/* ================= TITLE IMAGES ================= */
+.preamble h3 {background:url(title_preamble.gif) no-repeat;}
+.explanation h3 {background:url(title_explanation.gif) no-repeat;}
+.participation h3 {background:url(title_participation.gif) no-repeat;}
+.benefits h3 {background:url(title_benefits.gif) no-repeat;}
+.requirements h3 {background:url(title_requirements.gif) no-repeat;}
+.design-archives h3 {background:url(title_archives.gif) no-repeat;}
+.zen-resources h3 {background:url(title_resources.gif) no-repeat;}
+
+/* ===================================================== */
+/* ⭐ BOXED AND CENTERED ANIMATED “Select a Design” TITLE FIXED */
+/* ===================================================== */
+.design-selection h3{
+    display: block;                /* block-level for centering */
+    width: 95%;            /* box fits text */
+    margin: 0 auto 20px auto;      /* center horizontally */
+    padding: 10px 0px; 
+	padding-right: 30px;           /* spacing inside box */
+    border: 2px solid #D9189F;     /* box border */
+    border-radius: 8px;            /* rounded corners */
+    background: rgba(255,255,255,0.1); /* slightly transparent */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;           /* keep in one line */
+    letter-spacing: 2px;
+
+    /* OVERRIDE ORIGINAL H3 HIDING */
+    text-indent: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+
+    /* animated glowing text */
+    color: #D9189F;
+    animation: glowTextBox 3s ease-in-out infinite alternate;
+}
+
+/* glowing text animation */
+@keyframes glowTextBox {
+    0%{
+        color:#D9189F;
+        text-shadow:0 0 5px #ffb3e6;
+        transform:translateY(0);
+    }
+    50%{
+        color:#ff4dc4;
+        text-shadow:0 0 15px #ff66cc;
+        transform:translateY(-2px);
+    }
+    100%{
+        color:#D9189F;
+        text-shadow:0 0 5px #ffb3e6;
+        transform:translateY(0);
+    }
+}
+
+/* ================= LIST BACKGROUND ================= */
+.design-selection ul,
+.design-archives ul,
+.zen-resources ul{
+    margin:0;
+    padding:0 25px 20px 17px;
+    background: none;
+}
+/* SPACING FOR ALL CONTENT BOXES */
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+    padding: 1px 1px;   /* inner spacing */
+    margin-bottom: 10px;  /* space between boxes */
+    border-radius: 5px;   /* slightly rounded corners for nicer look */
+    background-color: #ffffff; /* keep white background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow like the first box */
+    box-sizing: border-box; /* ensure padding doesn't break layout */
+}
+/* LEFT SIDEBAR BOX SPACING */
+.sidebar,
+.design-selection,
+.design-archives,
+.zen-resources {
+    background-color: #ffffff;   /* keep boxes white */
+    padding: 15px 20px;          /* inner spacing */
+    margin-bottom: 20px;         /* space between boxes */
+    border-radius: 6px;          /* rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow for depth */
+    box-sizing: border-box;      /* include padding in width */
+}
+
+/* Sidebar list items spacing */
+.sidebar li,
+.design-selection li,
+.design-archives li,
+.zen-resources li {
+    padding: 8px 0;               /* space between items */
+    border-bottom: 1px dashed #ccc; /* optional separator like first design box */
+}
+
+/* Remove background images from links for clean spacing */
+.sidebar li a,
+.design-selection li a,
+.design-archives li a,
+.zen-resources li a {
+    background: none;
+    padding-left: 0;
+}
