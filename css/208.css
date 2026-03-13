@@ -1,44 +1,62 @@
+/* css Zen Garden submission - 'Sakura', by Tatsuya Uchida, http://www.re-bloom.com/ */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* All associated graphics copyright 2006, Tatsuya Uchida */
 
-body {
+
+/* IMPORTANT */
+/* This design is not a template. You may not reproduce it elsewhere without the 
+   designer's written permission. However, feel free to study the CSS and use 
+   techniques you learn from it elsewhere. */
+
+
+/* /////////////// basic elements /////////////// */
+
+
+body{
     margin:0;
     padding:0;
-    font:75%/1.4 verdana,Helvetica,sans-serif;
-    background-image: url("pint.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed;
+    font:75%/1.4 verdana, Helvetica, sans-serif;
+    background-image:url("pint.jpg");
+    background-repeat:no-repeat;
+    background-position:center top;
+    background-size:cover;
+    background-attachment:fixed;
     text-align:center;
 }
 
-h1,h2 {
+p{
+    margin:0;
+    padding:0;
+}
+
+abbr{
+    border:none;
+}
+
+h1, h2{
     display:none;
 }
 
-h3 {
+h3{
     height:38px;
     margin:0;
     padding:0;
-    text-indent:100%;   
+    text-indent:100%;
     white-space:nowrap;
     overflow:hidden;
 }
 
-p {margin:0;padding:0;}
-
-abbr {border:none;}
-
-a {
+a{
     color:#D9189F;
     background-color:#ffffff;
     text-decoration:underline;
 }
 
-a:hover {
+a:hover{
     color:#FC7AD5;
 }
 
-.page-wrapper {
+.page-wrapper{
     width:772px;
     margin:0 auto;
     padding:0 13px;
@@ -50,7 +68,7 @@ a:hover {
     text-align:left;
 }
 
-header {
+header{
     width:772px;
     height:178px;
     background-image:url("wp5695921 copy.jpg");
@@ -68,85 +86,29 @@ header::before{
     background:rgba(255,255,255,0.15);
 }
 
-.summary, .preamble, .explanation, .participation, .benefits, .requirements {
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements{
     width:546px;
-    background-color:#ffffff;  
+    margin:0 0 10px 226px;
+    padding:1px;
+    background-color:#ffffff;
     background-repeat:repeat-y;
-    margin:0 0 2px 226px;
+    border-radius:5px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
     color:#454545;
-    display:block;
+    box-sizing:border-box;
 }
 
-footer {
+footer{
     width:539px;
     margin:5px 0 0 226px;
-    text-align:right;
     padding:3px 14px 43px 0;
     background-color:#ffffff;
-}
-
-.sidebar {
-    position:absolute;
-    top:179px;
-    left:20px;
-    width:207px;
-    background-color:#ffffff;
-}
-
-.design-selection, .design-archives, .zen-resources {
-    margin:0 0 2px 0;
-    background-color:#ffffff;
-}
-
-.summary p, .explanation p, .benefits p {
-    padding:0 15px 10px 77px;
-}
-
-.preamble p, .participation p, .requirements p {
-    padding:0 85px 10px 17px;
-}
-
-.sidebar li {
-    list-style:none;
-    padding:6px 0 10px 0;
-    background:url(line.gif) bottom repeat-x;
-}
-
-.sidebar li a {
-    padding-left:7px;
-    background:url(link.gif) left center no-repeat;
-    text-decoration:none;
-}
-
-.sidebar li a:hover {
-    text-decoration:underline;
-}
-
-.summary p:first-child {
-    padding-top:14px;
-    background:
-        url(quicksummary_top.gif) top no-repeat,
-        url(right_bg.gif) right repeat-y;
-}
-
-.summary p:last-child {
-    padding-bottom:20px;
-    background:
-        url(right_bottom.gif) bottom no-repeat,
-        url(right_bg.gif) right repeat-y;
-}
-
-.design-selection li a {
-    display:block;
-    font-weight:bold;
-    background-position:0 0.6em;
-}
-
-.design-selection a.designer-name {
-    display:inline;
-    color:#666666;
-    padding:0;
-    background:none;
+    text-align:right;
 }
 
 footer a{
@@ -162,50 +124,92 @@ footer a:hover{
     color:#777777;
 }
 
-.extra1,.extra2,.extra3,.extra4,.extra5,.extra6{
-    display:none;
+.sidebar{
+    position:absolute;
+    top:179px;
+    left:20px;
+    width:207px;
+    background-color:#ffffff;
+    padding:15px 20px;
+    border-radius:6px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    box-sizing:border-box;
 }
 
-.summary {background-image:url(img_quicksummary.jpg);background-position:left bottom;}
-.preamble {background-image:url(enlightment.jpg);background-position:right bottom;}
-.explanation {background-image:url(img_explanation.jpg);background-position:left bottom;}
-.participation {background-image:url(img_participation.jpg);background-position:right bottom;}
-.benefits {background-image:url(img_benefits.jpg);background-position:left bottom;}
-.requirements {background-image:url(img_requirements.jpg);background-position:right bottom;}
+.design-selection,
+.design-archives,
+.zen-resources{
+    margin:0 0 20px 0;
+    background-color:#ffffff;
+    padding:15px 20px;
+    border-radius:6px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    box-sizing:border-box;
+}
 
-.preamble h3 {background:url(title_preamble.gif) no-repeat;}
-.explanation h3 {background:url(title_explanation.gif) no-repeat;}
-.participation h3 {background:url(title_participation.gif) no-repeat;}
-.benefits h3 {background:url(title_benefits.gif) no-repeat;}
-.requirements h3 {background:url(title_requirements.gif) no-repeat;}
-.design-archives h3 {background:url(title_archives.gif) no-repeat;}
-.zen-resources h3 {background:url(title_resources.gif) no-repeat;}
+.sidebar li,
+.design-selection li,
+.design-archives li,
+.zen-resources li{
+    list-style:none;
+    padding:8px 0;
+    border-bottom:1px dashed #ccc;
+}
+
+.sidebar li a,
+.design-selection li a,
+.design-archives li a,
+.zen-resources li a{
+    background:none;
+    padding-left:0;
+}
+
+.summary p,
+.explanation p,
+.benefits p{
+    padding:0 15px 10px 77px;
+}
+
+.preamble p,
+.participation p,
+.requirements p{
+    padding:0 85px 10px 17px;
+}
+
+.summary p:first-child{
+    padding-top:14px;
+    background:
+        url(quicksummary_top.gif) top no-repeat,
+        url(right_bg.gif) right repeat-y;
+}
+
+.summary p:last-child{
+    padding-bottom:20px;
+    background:
+        url(right_bottom.gif) bottom no-repeat,
+        url(right_bg.gif) right repeat-y;
+}
 
 .design-selection h3{
-    display: block;             
-    width: 95%;           
-    margin: 0 auto 20px auto;     
-    padding: 10px 0px; 
-	padding-right: 30px;          
-    border: 2px solid #D9189F;     
-    border-radius: 8px;           
-    background: rgba(255,255,255,0.1);
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;           
-    letter-spacing: 2px;
-
-    text-indent: 0 !important;
-    overflow: visible !important;
-    height: auto !important;
-
-    color: #D9189F;
-    animation: glowTextBox 3s ease-in-out infinite alternate;
+    display:block;
+    width:95%;
+    margin:0 auto 20px auto;
+    padding:10px 0;
+    border:2px solid #D9189F;
+    border-radius:8px;
+    background:rgba(255,255,255,0.1);
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    letter-spacing:2px;
+    text-indent:0 !important;
+    overflow:visible !important;
+    height:auto !important;
+    color:#D9189F;
+    animation:glowTextBox 3s ease-in-out infinite alternate;
 }
 
-
-@keyframes glowTextBox {
+@keyframes glowTextBox{
     0%{
         color:#D9189F;
         text-shadow:0 0 5px #ffb3e6;
@@ -228,47 +232,51 @@ footer a:hover{
 .zen-resources ul{
     margin:0;
     padding:0 25px 20px 17px;
-    background: none;
 }
 
-.summary,
-.preamble,
-.explanation,
-.participation,
-.benefits,
-.requirements {
-    padding: 1px 1px;   
-    margin-bottom: 10px; 
-    border-radius: 5px;   
-    background-color: #ffffff; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    box-sizing: border-box; 
+.summary{
+    background-image:url(img_quicksummary.jpg);
+    background-position:left bottom;
 }
 
-.sidebar,
-.design-selection,
-.design-archives,
-.zen-resources {
-    background-color: #ffffff;  
-    padding: 15px 20px;          
-    margin-bottom: 20px;         
-    border-radius: 6px;          
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    box-sizing: border-box;} 
+.preamble{
+    background-image:url(enlightment.jpg);
+    background-position:right bottom;
+}
 
+.explanation{
+    background-image:url(img_explanation.jpg);
+    background-position:left bottom;
+}
 
-.sidebar li,
-.design-selection li,
-.design-archives li,
-.zen-resources li {
-    padding: 8px 0;              
-    border-bottom: 1px dashed #ccc; }
+.participation{
+    background-image:url(img_participation.jpg);
+    background-position:right bottom;
+}
 
+.benefits{
+    background-image:url(img_benefits.jpg);
+    background-position:left bottom;
+}
 
-.sidebar li a,
-.design-selection li a,
-.design-archives li a,
-.zen-resources li a {
-    background: none;
-    padding-left: 0;
+.requirements{
+    background-image:url(img_requirements.jpg);
+    background-position:right bottom;
+}
+
+.preamble h3{background:url(title_preamble.gif) no-repeat;}
+.explanation h3{background:url(title_explanation.gif) no-repeat;}
+.participation h3{background:url(title_participation.gif) no-repeat;}
+.benefits h3{background:url(title_benefits.gif) no-repeat;}
+.requirements h3{background:url(title_requirements.gif) no-repeat;}
+.design-archives h3{background:url(title_archives.gif) no-repeat;}
+.zen-resources h3{background:url(title_resources.gif) no-repeat;}
+
+.extra1,
+.extra2,
+.extra3,
+.extra4,
+.extra5,
+.extra6{
+    display:none;
 }
